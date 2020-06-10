@@ -1,0 +1,33 @@
+.Chat-main
+  .Chat-main__group-info
+    .info-box
+      .info-title
+        test
+      .info-member
+        Member:muro
+    .info-button
+      = link_to '#' do
+        Edit
+  .Chat-main__message-list
+    .message-data
+      .message-data__name
+        muro
+      .message-data__date-time
+        2020/06/09(tue)17:51:36
+    .message-data__text
+      おはよう!
+      
+    .message-data
+      .message-data__name
+        muro
+      .message-data__date-time
+        2020/06/09(tue)17:52:20
+    .message-data__text
+      今日は夜から雨
+  .Chat-main__message-form
+    %form.input-box
+      %input{type: "text", placeholder: "type a message",class:"input-box__text" }
+      %label{class: "input-box__image"}
+        =icon('fas', 'image')
+        %input{type: "file", class:"input-box__image__file"}
+    %input.submit-btn{type: "submit", value: "Send"}
