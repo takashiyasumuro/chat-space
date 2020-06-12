@@ -25,14 +25,14 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 ### messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
-|image|string|null: false|
+|message|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
