@@ -2,46 +2,42 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="Chat-main__message-list">
-          <div class="message-data">
-            <div class="message-data__name">
-              ${message.user_name}
-            </div>
-            <div class="message-data__date-time">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="message-data__text">
-            <p class="Message__content">
-              ${message.content}
-            </p>
-            <img class="Message__image" src="${message.image}">
-          </div>
-        </div>`
+        `<div class="message-data">
+              <div class="message-data__name">
+                ${message.user_name}
+                <div class="message-data__date-time">
+                ${message.created_at}
+                </div>
+              </div>
+              <div class="message-data__text">
+                <p class="Message__content">
+                  ${message.content}
+                </p>
+                <img class="Message__image" src="${message.image}">
+              </div>
+            </div>`
       return html;
     } else {
       let html =
-        `<div class="Chat-main__message-list">
-          <div class="message-data">
-            <div class="message-data__name">
-              ${message.user_name}
-            </div>
-            <div class="message-data__date-time">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="message-data__text">
-            <p class="Message__content">
-              ${message.content}
-            </p>
-          </div>
-        </div>`
+      `<div class="message-data">
+      <div class="message-data__name">
+        ${message.user_name}
+        <div class="message-data__date-time">
+        ${message.created_at}
+        </div>
+      </div>
+      <div class="message-data__text">
+        <p class="Message__content">
+          ${message.content}
+        </p>
+        
+      </div>
+    </div>`
       return html;
     };
   }
   $('.form').on("submit", function(e){
     e.preventDefault();
-    console.log(this)
       let formData = new FormData(this);
       let url = $(this).attr('action');
       $.ajax({
