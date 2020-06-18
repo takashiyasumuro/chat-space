@@ -38,6 +38,10 @@ display: flex;
       color: #ffffff;
       .side-box{
         padding: 20px 20px 40px 20px;
+        a{
+          text-decoration: none;
+          color:white;
+        }
         .side-title{
           font-size: 15px;
           margin-bottom: 5px;
