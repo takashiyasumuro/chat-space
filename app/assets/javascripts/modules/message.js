@@ -4,19 +4,20 @@ $(function(){
       let html =
         `<div class="MessageBox" data-message-id=${message.id}>
           <div class="message-data">
-              <div class="message-data__name">
-                ${message.user_name}
-                <div class="message-data__date-time">
-                ${message.created_at}
-                </div>
-              </div>
-              <div class="message-data__text">
-                <p class="Message__content">
-                  ${message.content}
-                </p>
-                <img class="Message__image" src="${message.image}">
-              </div>
-            </div>`
+            <div class="message-data__name">
+              ${message.user_name}
+            </div>
+            <div class="message-data__date-time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="message-data__text">
+            <p class="Message__content">
+              ${message.content}
+            </p>
+            <img class="Message__image" src="${message.image}">
+          </div>
+        </div>`
       return html;
     } else {
       let html =
@@ -30,11 +31,11 @@ $(function(){
           </div>
         </div>
         <div class="message-data__text">
-        <p class="Message__content">
-          ${message.content}
-        </p>
-      </div>
-    </div>`
+          <p class="Message__content">
+            ${message.content}
+          </p>
+        </div>
+      </div>`
       return html;
     };
   }
