@@ -1,5 +1,4 @@
 $(function() {
-  console.log("js")
   function addUser(user) {
     let html = `
                 <div class="ChatMember clearfix">
